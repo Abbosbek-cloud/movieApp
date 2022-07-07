@@ -10,7 +10,7 @@ export default class Main extends Component {
   };
 
   componentDidMount() {
-    fetch("http://www.omdbapi.com/?apikey=3a772030&s=panda")
+    fetch("https://www.omdbapi.com/?apikey=3a772030&s=panda")
       .then((res) => res.json())
       .then((data) => {
         this.setState({ movies: data.Search, loading: false });
@@ -21,7 +21,7 @@ export default class Main extends Component {
   searchMovie = (name, type = "all") => {
     this.setState({ loading: true });
     fetch(
-      `http://www.omdbapi.com/?apikey=3a772030&s=${name}${
+      `https://www.omdbapi.com/?apikey=3a772030&s=${name}${
         type !== "all" ? `&type=${type}` : ""
       }`
     )
