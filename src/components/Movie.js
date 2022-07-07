@@ -3,7 +3,7 @@ export default function Movie(props) {
   return (
     <div key={imdbID} className="card movie">
       <div className="card-image waves-effect waves-block waves-light">
-        <img className="activator" src={Poster} />
+        <img className="activator" style={{height: "250px"}} src={Poster} />
       </div>
       <div className="card-content">
         <span className="card-title activator grey-text text-darken-4">
